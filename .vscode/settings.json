@@ -1,0 +1,18 @@
+{
+    "python.pythonPath": ".venv/bin/python",
+    "DockerRun.DisableDockerrc": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "db",
+            "group": "brownline",
+            "database": "brownline_app",
+            "username": "brownline",
+            "password": "brownline"
+        }
+    ],
+    "workbench.editor.highlightModifiedTabs": true
+}

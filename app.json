@@ -1,0 +1,17 @@
+{
+    "name": "Brownline",
+    "description": "Brownline",
+    "repository": "https://github.com/grimm-child/brownline",
+    "keywords": ["wagtail", "django"],
+    "env": {
+      "DJANGO_DEBUG": "on",
+      "DJANGO_SETTINGS_MODULE": "brownline.settings.dev",
+      "DJANGO_SECURE_SSL_REDIRECT": "on"
+    },
+    "scripts": {
+      "postdeploy": "django-admin.py migrate && echo 'from wagtail.images.models import Rendition; Rendition.objects.all().delete()' | django-admin.py shell"
+    },
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ]
+  }
